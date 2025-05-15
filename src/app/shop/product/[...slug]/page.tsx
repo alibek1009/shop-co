@@ -6,7 +6,7 @@ import {
 import ProductListSec from "@/components/common/ProductListSec";
 import BreadcrumbProduct from "@/components/product-page/BreadcrumbProduct";
 import Header from "@/components/product-page/Header";
-import Tabs from "@/components/product-page/Tabs";
+
 import { Product } from "@/types/product.types";
 import { notFound } from "next/navigation";
 
@@ -37,7 +37,6 @@ export default function ProductPage({
         <section className="mb-11">
           <Header data={productData} />
         </section>
-        <Tabs />
       </div>
       <div className="mb-[50px] sm:mb-20">
         <ProductListSec title="You might also like" data={relatedProductData} />
