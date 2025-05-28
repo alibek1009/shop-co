@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import Link from "next/link";
 import React from "react";
-import { NavMenu } from "../navbar.types"; // убедись, что тип поддерживает MenuItem
+import { NavMenu } from "../navbar.types";
 import { MenuItem } from "./MenuItem";
 import {
   NavigationMenu,
