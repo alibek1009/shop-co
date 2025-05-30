@@ -1,3 +1,5 @@
+"use client"; // добавлено, если будет использоваться Clerk позже
+
 import { cn } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import Link from "next/link";
@@ -72,7 +74,12 @@ const TopNavbar = () => {
           />
         </InputGroup>
 
+        {/* Иконки справа */}
         <div className="flex items-center">
+          {/* Корзина - первая */}
+          <CartBtn />
+
+          {/* Иконка поиска для мобильных */}
           <Link href="/search" className="block md:hidden mr-[14px] p-1">
             <Image
               priority
@@ -82,7 +89,18 @@ const TopNavbar = () => {
               alt="search"
             />
           </Link>
-          <CartBtn />
+
+          {/* Пользователь - вторая */}
+          <Link href="/#signin" className="p-1">
+            <Image
+              priority
+              src="/icons/user.svg"
+              height={100}
+              width={100}
+              alt="user"
+              className="max-w-[22px] max-h-[22px]"
+            />
+          </Link>
         </div>
       </div>
     </nav>
